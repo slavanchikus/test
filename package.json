@@ -7,6 +7,8 @@
     "server": "nodemon ./server/server.js"
   },
   "author": "Slavik",
+  "keywords": [],
+  "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.6",
     "express": "^4.16.3",

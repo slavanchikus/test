@@ -3,20 +3,31 @@ const db = require('../db.js');
 const User = db.user;
 
 exports.create = (req, res) => {
-  User.create(req.body).then((user) => {
+  const newUser = {
+    id: req.body.id,
+    shared: false,
+    email: ''
+  };
+
+  User.create(newUser).then((user) => {
     res.json(user);
   }).catch((err) => {
-    console.log(err);
-    res.status(500).json({ msg: 'error' });
+    res.status(500).json({ msg: 'error', err });
   });
 };
 
 exports.findById = (req, res) => {
   User.findById(req.params.id).then((user) => {
+    if (!user) {
+      res.json({
+        id: null,
+        shared: false,
+        email: ''
+      });
+    }
     res.json(user);
   }).catch((err) => {
-    console.log(err);
-    res.status(500).json({ msg: 'error' });
+    res.status(500).json({ msg: 'error', err });
   });
 };
 

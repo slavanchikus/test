@@ -1,0 +1,43 @@
+@import "../../uikit/shared.styl";
+
+.container
+  display: flex
+  flex-direction: column
+  position: relative
+  margin-top: 36px
+
+.text
+  color: #ffffff
+  font-family: "Open Sans"
+  font-size: 18px
+
+.number
+  composes: shared_number
+  position: absolute
+  top: -10px
+  left: -55px
+
+.icons
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-top: 15px
+  >div
+    width: 53px
+    height: 53px
+    margin-right: 29px
+    cursor: pointer
+    &:last-child
+      margin-right: 0
+
+.vk
+  background: url('../../images/vk.png') no-repeat
+
+.fb
+  background: url('../../images/fb.png') no-repeat
+
+.tw
+  background: url('../../images/tw.png') no-repeat
+
+.ok
+  background: url('../../images/ok.png') no-repeat
