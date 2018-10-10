@@ -1,0 +1,51 @@
+{
+  "name": "AviaTest",
+  "description": "AviaTest",
+  "scripts": {
+    "dev": "webpack -d && webpack-dev-server --content-base build/ --hot --mode development",
+    "build": "webpack --mode production",
+    "server": "nodemon ./server/server.js"
+  },
+  "author": "Slavik",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "express": "^4.16.3",
+    "prop-types": "15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "4.0.0",
+    "redux-saga": "0.16.2",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "nodemon": "^1.18.4",
+    "pg": "^7.5.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.0",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
