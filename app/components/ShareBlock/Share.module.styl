@@ -8,6 +8,7 @@
 
 .text
   font-size: 18px
+  transition: opacity 0.3s ease 0s
 
 .number
   composes: shared_number
@@ -16,7 +17,7 @@
   left: -55px
 
 .disabled
-  .text, .icons
+  .text
     opacity: 0.6
 
 @media (max-width: 550px)
