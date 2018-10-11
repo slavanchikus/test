@@ -32,18 +32,18 @@ class MainContainer extends Component {
     const userId = localStorage.getItem('aviatest');
 
     if (!userId) {
-      const randomId = Math.floor(Math.random() * 10000) + 1;
+      const randomId = Math.floor(Math.random() * 100000) + 1;
       localStorage.setItem('aviatest', randomId);
       createUser(randomId);
     } else {
       getUser(userId);
     }
 
-    /* let position = 0;
+    let position = 0;
     setInterval(() => {
       position -= 1;
       this.container.style.backgroundPosition = `${+position}px 0px`;
-    }, 50); */
+    }, 50);
   }
 
   updateUserField = (field, value) => {
@@ -58,7 +58,7 @@ class MainContainer extends Component {
   render() {
     const { user } = this.props;
 
-    const className = cx(styles.content, {
+    const contentClassName = cx(styles.content, {
       [styles.hided]: !user.id || (user.shared && user.email)
     });
 
@@ -68,7 +68,7 @@ class MainContainer extends Component {
         className={styles.container}
       >
         <div className={styles.logo} />
-        <div className={className}>
+        <div className={contentClassName}>
           <Title />
           <Share
             shared={user.shared}

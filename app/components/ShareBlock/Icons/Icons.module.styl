@@ -1,0 +1,34 @@
+.container
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-top: 15px
+  >div
+    width: 53px
+    height: 53px
+    margin-right: 29px
+    cursor: pointer
+    &:last-child
+      margin-right: 0
+
+.vk
+  background: url('../../../images/vk.png') no-repeat
+
+.fb
+  background: url('../../../images/fb.png') no-repeat
+
+.tw
+  background: url('../../../images/tw.png') no-repeat
+
+.ok
+  background: url('../../../images/ok.png') no-repeat
+
+.disabled
+  opacity: 0.6
+  pointer-events: none
+  user-select: none
+
+@media (max-width: 550px)
+  .container
+    >div
+      margin-right: 16px

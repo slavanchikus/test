@@ -50,7 +50,7 @@ function* watchUpdateUserRequest() {
 }
 
 
-export function* audioSagas() {
+export function* userSagas() {
   yield fork(watchGetUserRequest);
   yield fork(watchCreateUserRequest);
   yield fork(watchUpdateUserRequest);

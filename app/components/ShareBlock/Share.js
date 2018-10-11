@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import cx from 'classnames';
 
+import Icons from './Icons/Icons';
 import Popup from './Popup/Popup';
 import CheckBox from '../_Shared/CheckBox/CheckBox';
 
@@ -64,27 +65,10 @@ export default class Share extends Component {
         >
           Поделись с друзьями:
         </div>
-        <div
+        <Icons
+          disabled={shared}
           onClick={this.clickLogo}
-          className={styles.icons}
-        >
-          <div
-            data-network="vk"
-            className={styles.vk}
-          />
-          <div
-            data-network="fb"
-            className={styles.fb}
-          />
-          <div
-            data-network="tw"
-            className={styles.tw}
-          />
-          <div
-            data-network="ok"
-            className={styles.ok}
-          />
-        </div>
+        />
         {showPopup
         && <Popup
           network={network}
