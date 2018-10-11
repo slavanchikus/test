@@ -12,7 +12,7 @@ exports.create = (req, res) => {
   User.create(newUser).then((user) => {
     res.json(user);
   }).catch((err) => {
-    res.status(500).json({ msg: 'error', err });
+    res.status(500).json({ msg: 'error' });
   });
 };
 
@@ -27,18 +27,17 @@ exports.findById = (req, res) => {
     }
     res.json(user);
   }).catch((err) => {
-    res.status(500).json({ msg: 'error', err });
+    res.status(500).json({ msg: 'error' });
   });
 };
 
-/* // Update a Customer
+
 exports.update = (req, res) => {
-  const id = req.body.id;
-  Customer.update(req.body,
+  const { id } = req.body;
+  User.update(req.body,
     { where: { id }}).then(() => {
-    res.status(200).json({ mgs: `Updated Successfully -> Customer Id = ${id}` });
+    res.status(200).json(req.body);
   }).catch((err) => {
-    console.log(err);
-    res.status(500).json({ msg: 'error', details: err });
+    res.status(500).json({ msg: 'error' });
   });
-}; */
+};

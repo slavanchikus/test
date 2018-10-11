@@ -1,0 +1,32 @@
+.container
+  display: flex
+  align-items: center
+  justify-content: center
+  align-self: center
+  width: 230px
+  height: 70px
+  margin-top: 40px
+  border-radius: 35px
+  border: 2px solid #ffffff
+  background: #ffffff
+  color: #cd718e
+  font-family: "Shnobel"
+  font-size: 40px
+  font-weight: 400
+  cursor: pointer
+  &:hover
+    background: #7f4156
+    color: #ffffff
+    border-color: #7f4156
+
+.disabled
+  background: #cd718e
+  color: #ffffff
+  user-select: none
+  pointer-events: none
+
+@media (max-width: 550px)
+  .container
+    width: 260px
+    height: 60px
+    font-size: 30px

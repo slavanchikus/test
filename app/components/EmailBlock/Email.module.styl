@@ -1,0 +1,47 @@
+@import "../../uikit/shared.styl";
+
+.container
+  display: flex
+  flex-direction: column
+  position: relative
+  margin-top: 36px
+  >input
+    width: 302px
+    height: 50px
+    margin-top: 22px
+    padding: 12px 28px
+    box-sizing: border-box
+    border: 0
+    border-radius: 25px
+    background-color: #ffffff
+    color: rgba(0, 0, 0, 0.81)
+    font-size: 20px
+    outline: none
+
+.text
+  font-size: 18px
+
+.number
+  composes: shared_number
+  position: absolute
+  top: -10px
+  left: -55px
+
+.disabled
+  >input, .text
+    opacity: 0.6
+    user-select: none
+    pointer-events: none
+
+@media (max-width: 550px)
+  .container
+    >input
+      width: 260px
+      height: 50px
+      font-size: 16px
+
+  .text
+    font-size: 16px
+
+  .number
+    display: none

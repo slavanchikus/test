@@ -7,8 +7,6 @@
   margin-top: 36px
 
 .text
-  color: #ffffff
-  font-family: "Open Sans"
   font-size: 18px
 
 .number
@@ -41,3 +39,23 @@
 
 .ok
   background: url('../../images/ok.png') no-repeat
+
+
+.disabled
+  .text, .icons
+    opacity: 0.6
+  .icons
+    >div
+      cursor: initial
+
+@media (max-width: 550px)
+  .text
+    font-size: 16px
+
+  .number
+    display: none
+
+  .icons
+    >div
+      margin-right: 16px
+

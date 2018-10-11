@@ -35,7 +35,23 @@ function* watchCreateUserRequest() {
 }
 
 
+function* updateUser({ user }) {
+  try {
+    const payload = yield call(apiClient.updateUser, user);
+    yield put({ type: 'UPDATE_USER_COMPLETE', payload });
+  } catch (error) {
+    yield put({ type: 'UPDATE_USER_ERROR' });
+    throw error;
+  }
+}
+
+function* watchUpdateUserRequest() {
+  yield takeEvery('UPDATE_USER', updateUser);
+}
+
+
 export function* audioSagas() {
   yield fork(watchGetUserRequest);
   yield fork(watchCreateUserRequest);
+  yield fork(watchUpdateUserRequest);
 }
